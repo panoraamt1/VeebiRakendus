@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How CSS Rules Cascade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #665544;
+            padding: 22px;
+        }
+        h1, h2, p {
+            padding: 12px;
+            line-height: 2em;
+        }
+        i, a, a:visited {
+            color: blue;
+        }
+        a:hover {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Potatos</h1>
+    <p id="intro">
+        Lorem ipsum <i>dolor sit</i> amet consectetur adipisicing elit. 
+        Eos quasi deserunt explicabo, 
+        eum quisquam veritatis eligendi asperiores optio est? 
+        <b>Perspiciatis</b>, 
+        a suscipit itaque quidem ullam obcaecati <a href="">quis</a> labore dolorem necessitatibus!
+    </p>
+</body>
+</html>
