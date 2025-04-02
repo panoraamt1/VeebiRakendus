@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #2600ff;
+        }
+
+        .zoom {
+            transition: transform .2s;
+        }
+
+        .zoom:hover {
+            -ms-transform: scale(1.08);
+            -webkit-transform: scale(1.08);
+            transform: scale(1.08); 
+        }
+
+        #companyCarousel {
+            margin-bottom: 50px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        #map {
+            background-color: lightgray;
+            text-align: center;
+            line-height: 300px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Bikeway</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="blogs.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container mt-4">
+        <div id="products-view">
+            <h2>Our Products</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="https://velomarket.ee/en/products/gravel-bike-liv-devote-1-2024-28-charcoal-plum/">
+                        <div class="card zoom">
+                            <img src="image/jalgratas_Liv_Devote1_2024-CharcoalPlum.png" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Gravel bike LIV Devote 1, Charcoal Plum</h5>
+                                <p class="card-text">1899,00 €</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://velomarket.ee/en/products/outdoor-tire-continental-tire-mtb-double-fighter-iii-29x1-9/">
+                        <div class="card zoom">
+                            <img src="image/Välisrehv-CONTINENTAL-Tire-MTB-Double-Fighter-III-29x1.9-1.png" class="card-img-top" alt="Product 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Outdoor tire CONTINENTAL Tire MTB Double Fighter III 29"x1.9"</h5>
+                                <p class="card-text">26,90 €</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://velomarket.ee/en/products/brake-shimano-br-t4000-first-silver/">
+                        <div class="card zoom">
+                            <img src="image/Pidur-SHIMANO-BR-T4000-esimene-hõbe.jpg" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Brake SHIMANO BR-T4000 first silver</h5>
+                                <p class="card-text">25,90 €</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://velomarket.ee/en/products/brake-disc-shimano-203-mm-6-bolt-sm-rt86/">
+                        <div class="card zoom">
+                            <img src="image/Piduriketas-SHIMANO-203-mm-6-Bolt-(SM-RT86).png" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Brake disc SHIMANO 203 mm 6-Bolt (SM-RT86)</h5>
+                                <p class="card-text">61,20 €</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://velomarket.ee/en/products/cassette-shimano-cs-hg51-8k-11-32/">
+                        <div class="card zoom">
+                            <img src="image/Kassett-SHIMANO-CS-HG51-8k-11-32.jpg" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Cassette SHIMANO CS-HG51 8k 11-32</h5>
+                                <p class="card-text">24,90 €</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://velomarket.ee/en/products/chain-shimano-hg53-9-gears/">
+                        <div class="card zoom">
+                            <img src="image/Kett-SHIMANO-HG53-9-käiku.png" class="card-img-top" alt="Product 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Chain SHIMANO HG53 9 gears</h5>
+                                <p class="card-text">24,90 €</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
