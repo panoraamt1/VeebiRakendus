@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="plusEqual"></p>
+    <p id="minusEqual"></p>
+    <p id="exponentiation"></p>
+    <p id="lefthift"></p>
+    <p id="bitwiseAND"></p>
+</body>
+<script>
+    let x = 9;
+    x += 3;
+    document.getElementById("plusEqual").innerHTML = "X väärtus on: " + x;
+
+    x -= 4
+    document.getElementById("minusEqual").innerHTML = "X väärtus on: " + x;
+
+    x **= 5
+    document.getElementById("exponentiation").innerHTML = "X väärtus astmes viis on: " + x;
+
+    let a = -10;
+    a <<= 5;
+    //astendab
+    document.getElementById("lefthift").innerHTML = "A väärtus left shifti puhul on: " + a;
+
+    let b = 100;
+    b &= 5;
+    document.getElementById("bitwiseAND").innerHTML = "B väärtus on: " + b;
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="intString"></p>
+    <p id="addString"></p>
+    <p id="plusAfterString"></p>
+    <p id="numbers"></p>
+    <p id="bigInt"></p>
+    <p id="boolean"></p>
+    <p id="array"></p>
+    <p id="person"></p>
+    <p id="typeOf"></p>
+</body>
+<script>
+    let x = 16 + "BMW";
+    document.getElementById("intString").innerHTML = x;
+
+    let y = 16 + 4 + "BMW";
+    document.getElementById("addString").innerHTML = y;
+
+    let a = "BMW" + 16 + 4;
+    document.getElementById("plusAfterString").innerHTML = a;
+
+    let b = 123e5;
+    let c = 123e-5;
+    document.getElementById("numbers").innerHTML = b + "<br>" + c;
+
+    let z = BigInt("123456789012345678901234567890");
+    let sum = z + 3n; 
+    // kui tahad liinta int ja bigint on vaja lisada int-i lõppu n
+    document.getElementById("bigInt").innerHTML = sum;
+
+    let q = 7;
+    let w = 7;
+    let e = 9;
+    document.getElementById("boolean").innerHTML = (q == w) + "<br>" + (q == e);
+
+    const runningShoes = ["Puma", "Adidas", "Saconey", "On"]
+    document.getElementById("array").innerHTML = runningShoes[2];
+
+    const person = {
+        firstName: "John",
+        height: 188,
+        age:34,
+        hairColor: "brown"
+    };
+    document.getElementById("person").innerHTML = person.firstName + " is " + person.age + " years old.";
+
+    document.getElementById("typeOf").innerHTML = typeof 0 + "<br>" + typeof "asd" + "<br>" + typeof 3.14 + "<br>";
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="multiplication"></p>
+    <p id="conversion"></p>
+</body>
+<script>
+    function multiplication(p1, p2) {
+        return p1 * p2;
+    }
+    let result = multiplication(6, 9)
+    document.getElementById("multiplication").innerHTML = result;
+
+    function celsiusToFahrenheit(s1){
+        return (s1 * 1.8) + 32
+    }
+    let fhs = celsiusToFahrenheit(25)
+    document.getElementById("conversion").innerHTML = fhs + " °F";
+</script>
+</html>
