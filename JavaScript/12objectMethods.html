@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="human"></p>
+    <p id="human1"></p>
+    <p id="human2"></p>
+</body>
+<script>
+    const person = {firstName:"Heli", lastName:"Kopter", age:40};
+    person.name = function(){return(this.firstName + " " + this.lastName).toUpperCase();};
+    document.getElementById("human").innerHTML = "My name is " + person.name();
+
+    const person1 = {firstName:"Heli", lastName:"Kopter", age:40};
+    person1.name = function(){return(this.firstName + " " + this.lastName).repeat(2);};
+    document.getElementById("human1").innerHTML = "My name is " + person1.name();
+
+    const person2 = {firstName:"Heli", lastName:"Kopter", age:40};
+    person2.name = function(){return(this.firstName + " " + this.lastName).toLowerCase();};
+    document.getElementById("human2").innerHTML = "My name is " + person2.name();
+    //slice, split, lenght, charAt, replace,
+</script>
+</html>

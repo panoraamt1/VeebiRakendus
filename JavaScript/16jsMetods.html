@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>CharAt näitab sulgudes olevat tähte.</p>
+    <p id="hello"></p>
+    <p id="mornen"></p>
+    <p id="pipes"></p>
+    <p id="mine"></p>
+    <p id="domo"></p>
+    <p id="how"></p>
+</body>
+<script>
+    var text = "HELLO WORLD";
+    document.getElementById("hello").innerHTML = text.charAt(3);
+
+    var text1 = "TOP OF THE MORNEN TA YA.";
+    document.getElementById("mornen").innerHTML = text1.charCodeAt(3);
+
+    let text2a = "            MY PIPES ME PIPES";
+    let text2b = text2a.trimStart();
+    document.getElementById("pipes").innerHTML = text2a + "<br>" + "Length without = " + text2a.length + "<br>Length with = " + text2b.length;
+
+    let text3 = "5";
+    text3 = text3.padStart(4,"0");
+    document.getElementById("mine").innerHTML = text3;
+
+    let text4 = "KONNICHIWA "
+    document.getElementById("domo").innerHTML = text4.repeat(3);
+
+    let text5 = "HELLO WORLD HOW ARE YOU";
+    document.getElementById("how").innerHTML = text3.match("ext");
+</script>
+</html>

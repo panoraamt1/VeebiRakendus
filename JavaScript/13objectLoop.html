@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="human"></p>
+    <p id="fruit"></p>
+    <p id="kadri"></p>
+</body>
+<script>
+    const person = {firstName:"Heli", lastName:"Kopter", age:40};
+    
+    let text = "";
+    for (let x in person) {
+        text += person[x] + " ";
+    };
+    document.getElementById("human").innerHTML = text;
+
+    const fruits = {Apple: 100, Banana: 100, Tangeriin: 450};
+    let text1 = "";
+    for (let [fruit, amount] of Object.entries(fruits)) {
+        text1 += fruit + ": " + amount + "<br>";
+    };
+    document.getElementById("fruit").innerHTML = text1;
+
+    const person1 = {firstName:"Kadri", lastName:"Org", age:20};
+  
+    document.getElementById("kadri").innerHTML = JSON.stringify(person1);
+
+</script>
+</html>
