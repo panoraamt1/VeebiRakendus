@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p id="carsArray"></p>
+    <p>-----------------------------------</p>
+    <p id="bussesArray"></p>
+    <p>-----------------------------------</p>
+    <p id="trainsArray"></p>
+    <p>-----------------------------------</p>
+    <p>Ainult Volvo bussi nimetus</p>
+    <p id="vol"></p>
+    <p>-----------------------------------</p>
+    <p id="buildings"></p>
+    <p>-----------------------------------</p>
+    <p>Majade loetelu, aga sõnade vahel tärnid</p>
+    <p id="Asterisk"></p>
+    <p>-----------------------------------</p>
+    <p id="buildingsPop"></p>
+    <p>-----------------------------------</p>
+    <p>Lisa uus massiiv buildings-isse</p>
+    <p id="buildingsPush1"></p>
+    <p id="buildingsPush2"></p>
+    <p>-----------------------------------</p>
+    <p>Liidab kaks massivi kokku</p>
+    <p id="spaceRocks"></p>
+</body>
+<script>
+    const cars = ["Audi", "MAN", "BMW"];
+    document.getElementById("carsArray").innerHTML = cars;
+
+    const busses = [];
+    busses[0] = "Ikarus";
+    busses[1] = "Volvo";
+    busses[2] = "Scania";
+    document.getElementById("bussesArray").innerHTML = busses;
+    document.getElementById("vol").innerHTML = busses[1];
+
+    const trains = new Array("Skoda", "ALSTOM", "Simens");
+    document.getElementById("trainsArray").innerHTML = trains;
+
+    const buildings = ["house", "cottage", "flat", "bangaloow"]
+    let building = buildings.at(2);
+    document.getElementById("buildings").innerHTML = building;
+    document.getElementById("Asterisk").innerHTML = buildings.join(" * ");
+
+    buildings.pop();
+    document.getElementById("buildingsPop").innerHTML = buildings;
+    document.getElementById("buildingsPush1").innerHTML = buildings.push("shed");
+    document.getElementById("buildingsPush2").innerHTML = buildings;
+
+    const planets = ["Venus", "Earth"];
+    const moons = ["Ganymede", "Titan", "Europa"]
+    const spaceRocks = planets.concat(moons);
+    document.getElementById("spaceRocks").innerHTML = spaceRocks;
+</script>
+</html>

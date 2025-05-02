@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="numberOver"></p>
+
+    <p>Kõikide numbrite koondsummas</p>
+    <p id="numberSum"></p>
+
+    <p>Tulemuseks peaks olema: Kõik üle 18 on false</p>
+    <p id="numberEvery"></p>
+
+    <p>Kasuta keys() funktsiooni for loobis, et tulemus oleks 0, 1, 2, 3 üksteise all</p>
+    <p id="carKeys"></p>
+
+    <p>-----------------------------------</p>
+    <p id="daysWith"></p>
+</body>
+<script>
+    const numbers = [45, 6, 2, 17, 34];
+    const overNumber18 = numbers.filter(numbersOver);
+
+    document.getElementById("numberOver").innerHTML = overNumber18;
+
+    function numbersOver(value, index, array) {
+        return value > 18;
+    }
+
+    let sum = numbers.reduce(arraySum);
+    
+    document.getElementById("numberSum").innerHTML = "Koondsumma on " + sum;
+
+    function arraySum(total, value, index, array){
+        return total + value;
+    }
+
+    function checkNumber(number) {
+        return number > 18;
+    }
+    document.getElementById("numberEvery").innerHTML = "Kõik üle 18 on " + numbers.every(checkNumber);
+
+    const cars = ["Audi", "BMW", "Saab", "Wolkswagen"];
+    const list = cars.keys();
+
+    let car = "";
+    for (let x of list) {
+        car += x + "<br>";
+    }
+    document.getElementById("carKeys").innerHTML = car;
+
+    const days = ["Monday", "Tuesday", "Wen", "Thursday"];
+    const myDays = days.with(2, "Wendsday");
+    document.getElementById("daysWith").innerHTML = myDays;
+</script>
+</html>
