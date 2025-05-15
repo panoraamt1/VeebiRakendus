@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="ajaxList">
+    <p>Kasuta for loopi</p>
+    <p>faili laiend .xml</p>
+    <p>20 rida nomesid</p>
+    <p>iga nimi eraldi reas</p>
+    <button type="button" onclick="loadText()">Click me!</button>
+</body>
+<script>
+    function loadText() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                const xmlDocument = this.responseXML;
+                const x = xmlDocument.getElementsByTagName("NAME")
+                let txt = "";
+                for (let i = 0; i < x.length; i++) {
+                    txt += x[i].textContent + "<br>";
+                }
+                document.getElementById("ajaxList").innerHTML = txt;
+            }
+        };
+        xhttp.open("GET", "ajaxNames.xml");
+        xhttp.send();
+    }
+</script>
+</html>

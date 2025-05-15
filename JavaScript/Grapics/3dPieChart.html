@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="http://www.gstatic.com/chrts/loader.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="3dChart" style="width: 100%; max-width: 600px; height: 500px;"></div>
+</body>
+<script>
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        const data = google.visualization.arrayToDataTable( ['Country', 'Mh1'], ["Italy", 30.5], ["Germany",23.4], ["Estonia",15.9], ["Sweden",19.1], ["Finland",14.1]);
+        const option = {
+            title: 'World wide crannberry production',
+            is3D:true
+        };
+
+        const chart = new google.visualization.PieChart(document.getElementById('3dChart'));
+        chart.draw(data, option);
+    }
+</script>
+</html>
